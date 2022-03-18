@@ -1,5 +1,6 @@
 import { Formik  } from "formik";
 import CityVal from "./CityVal";
+import Values from '../cities.json'
 import { useState,useEffect } from "react";
 import axios from 'axios'
 function Fetch() {
@@ -26,20 +27,21 @@ function Fetch() {
             <form onSubmit={handleSubmit}>
           
             <select name="CityVal" value={values.CityVal} onChange={handleChange}>
-              <option value="sivas">Sivas</option>
-              <option value="istanbul">İstanbul</option>
+            {Values.map((e,i)=>(
+               <option key={i} value={e.name}>{e.name}</option>
+            ))}
+             
+              
             </select>
             <br />
             <button type="submit" onSubmit={handleSubmit}>Gönder</button>
             <br />
-            <code>{JSON.stringify(values)}</code>
+            <code>{values.CityVal}</code>
           </form>
            )
        }
       </Formik>
-        {coordinates.lat}
-        <br></br>
-        {coordinates.lon}
+        
 
        <CityVal coordinates={coordinates} city={city}/>
 
