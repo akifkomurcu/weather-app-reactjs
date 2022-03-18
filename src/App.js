@@ -1,6 +1,6 @@
 
 import './App.css';
-import Fetch from './Components/Fetch';
+import Coordinates from './Components/Coordinates';
 
 function App() {
  
@@ -9,7 +9,9 @@ function App() {
     <div className="App">
       <header className="App-header">
         
-        <Fetch></Fetch>
+        <Coordinates>
+          
+        </Coordinates>
 
       </header>
     </div>
