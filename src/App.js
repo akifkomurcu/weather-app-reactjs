@@ -1,7 +1,6 @@
 
 import './App.css';
-import {CityProvider} from './Components/Context/Context';
-import Vericek from './Components/Vericek';
+import Fetch from './Components/Fetch';
 
 function App() {
  
@@ -10,9 +9,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         
-    <CityProvider>
-<Vericek/>
-    </CityProvider>
+        <Fetch></Fetch>
 
       </header>
     </div>
