@@ -16,14 +16,15 @@ function Form() {
     const onChangeInput=(e)=>{
       
      setResult(cities.find(cities=>cities.name===form.name))
-      console.log(result)
+      // console.log(result)
      
     }
   return (
    
       <div>
         
-       
+       <span style={{marginBottom:"20px"}}>select a city</span>
+       <br/>
         <select name={ form.name } onChange={(e)=>setForm({ name:e.target.value})}>
             {cities.map((e,i)=>(
               <option key={i} value={e.name}>{e.name}</option>
