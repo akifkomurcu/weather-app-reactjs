@@ -1,9 +1,5 @@
 import {useEffect,useState} from 'react'
 
-
-
-// .src = "https://openweathermap.org/img/wn/" + icon + ".png";
-
 function Fetch({result}) {
 
     const [obj,setObj]=useState({})
@@ -24,27 +20,108 @@ function Fetch({result}) {
            
        console.log(res)
         // console.log(res)
-       await atama( res.list[0].weather[0].main,res.list[0].weather[0].icon)
+        const datas=
+        {
+          weather1:res.list[0].weather[0].main,
+          icon1:res.list[0].weather[0].icon,
+       
+          weather2:res.list[1].weather[0].main,
+          icon2:res.list[1].weather[0].icon,
+       
+          weather3:res.list[2].weather[0].main,
+          icon3:res.list[2].weather[0].icon,
+             
+          weather4:res.list[3].weather[0].main,
+          icon4:res.list[3].weather[0].icon,
+            
+          weather5:res.list[4].weather[0].main,
+          icon5:res.list[4].weather[0].icon,
+            
+          weather6:res.list[5].weather[0].main,
+          icon6:res.list[5].weather[0].icon,
+           
+          weather7:res.list[6].weather[0].main,
+          icon7:res.list[6].weather[0].icon,
+        }
+        
+       await atama( datas)
       }
 
-      async function atama(res,icon){
+      async function atama(datas){
         
-        setObj({weather:res,icon:icon})     
-        // main.innerHTML=obj.weather
-        // console.log(obj)
+        setObj(datas)     
+
       }
        
     
   return (
-    
-  <div className="card" style={{width: "18rem",color:"white",background:"grey"}}>
-  <img src={`https://openweathermap.org/img/wn/${obj.icon}.png`} className="card-img-top" alt="..." style={{width:"100px",margin:"0 auto"}}/>
+    <div className='container'>
+      <div className="row col-xs-12 ">
+      <div className="card" style={{width: "11rem",color:"black",height:"14rem",marginRight:"10px",marginTop:"10px",background:"#F7CCAC"}}>
+  <img src={`https://openweathermap.org/img/wn/${obj.icon1}.png`} className="card-img-top" alt="..." style={{width:"50px",margin:"0 auto"}}/>
   <div className="card-body">
   <h5 className="card-title"> {result.name}</h5>
-  <p className="card-text">{obj.weather}</p>
+  <p className="card-text">{obj.weather1}</p>
   {/* <p className="card-text-cel">{obj.weather}</p> */}
 </div>
 </div>
+<div className="card" style={{width: "11rem",color:"black",height:"14rem",marginRight:"10px",marginTop:"10px",background:"#F7CCAC"}}>
+  <img src={`https://openweathermap.org/img/wn/${obj.icon2}.png`} className="card-img-top" alt="..." style={{width:"50px",margin:"0 auto"}}/>
+  <div className="card-body">
+  <h5 className="card-title"> {result.name}</h5>
+  <p className="card-text">{obj.weather2}</p>
+  {/* <p className="card-text-cel">{obj.weather}</p> */}
+</div>
+</div>
+<div className="card" style={{width: "11rem",color:"black",height:"14rem",marginRight:"10px",marginTop:"10px",background:"#F7CCAC"}}>
+  <img src={`https://openweathermap.org/img/wn/${obj.icon3}.png`} className="card-img-top" alt="..." style={{width:"50px",margin:"0 auto"}}/>
+  <div className="card-body">
+  <h5 className="card-title"> {result.name}</h5>
+  <p className="card-text">{obj.weather3}</p>
+  {/* <p className="card-text-cel">{obj.weather}</p> */}
+</div>
+</div>
+<div className="card" style={{width: "11rem",color:"black",height:"14rem",marginRight:"10px",marginTop:"10px",background:"#F7CCAC"}}>
+  <img src={`https://openweathermap.org/img/wn/${obj.icon4}.png`} className="card-img-top" alt="..." style={{width:"50px",margin:"0 auto"}}/>
+  <div className="card-body">
+  <h5 className="card-title"> {result.name}</h5>
+  <p className="card-text">{obj.weather4}</p>
+  {/* <p className="card-text-cel">{obj.weather}</p> */}
+</div>
+</div>
+<div className="card" style={{width: "11rem",color:"black",height:"14rem",marginRight:"10px",marginTop:"10px",background:"#F7CCAC"}}>
+  <img src={`https://openweathermap.org/img/wn/${obj.icon5}.png`} className="card-img-top" alt="..." style={{width:"50px",margin:"0 auto"}}/>
+  <div className="card-body">
+  <h5 className="card-title"> {result.name}</h5>
+  <p className="card-text">{obj.weather5}</p>
+  {/* <p className="card-text-cel">{obj.weather}</p> */}
+</div>
+</div>
+<div className="card" style={{width: "11rem",color:"black",height:"14rem",marginRight:"10px",marginTop:"10px",background:"#F7CCAC"}}>
+  <img src={`https://openweathermap.org/img/wn/${obj.icon6}.png`} className="card-img-top" alt="..." style={{width:"50px",margin:"0 auto"}}/>
+  <div className="card-body">
+  <h5 className="card-title"> {result.name}</h5>
+  <p className="card-text">{obj.weather6}</p>
+  {/* <p className="card-text-cel">{obj.weather}</p> */}
+</div>
+</div>
+<div className="card" style={{width: "11rem",color:"black",height:"14rem",marginRight:"10px",marginTop:"10px",background:"#F7CCAC"}}>
+  <img src={`https://openweathermap.org/img/wn/${obj.icon7}.png`} className="card-img-top" alt="..." style={{width:"50px",margin:"0 auto"}}/>
+  <div className="card-body">
+  <h5 className="card-title"> {result.name}</h5>
+  <p className="card-text">{obj.weather7}</p>
+  {/* <p className="card-text-cel">{obj.weather}</p> */}
+</div>
+</div>
+
+      </div>
+
+
+
+
+    </div>
+  
+
   )
 }
 

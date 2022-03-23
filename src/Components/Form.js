@@ -21,7 +21,7 @@ function Form() {
     }
   return (
    
-      <header className="App-header">
+      <div>
         
        
         <select name={ form.name } onChange={(e)=>setForm({ name:e.target.value})}>
@@ -30,12 +30,12 @@ function Form() {
             ))}
         </select>
         <br />
-        <button type='submit' className='btn btn-primary' onClick={onChangeInput}>GONDER</button>
+        <button style={{marginTop:"10px"}} type='submit' className='btn btn-primary' onClick={onChangeInput}>GONDER</button>
         
       <br />
       
         <Fetch result={result}/>
-      </header>
+      </div>
 
   )
   
