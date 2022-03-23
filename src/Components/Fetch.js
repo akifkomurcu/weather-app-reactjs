@@ -92,9 +92,11 @@ function Fetch({result}) {
        
     
   return (
+    
     <div className='container'>
       <div className="row col-xs-12 ">
       <div className="card today" >
+        
   <img src={`https://openweathermap.org/img/wn/${obj.icon1}.png`} className="card-img-top" alt="..." style={{width:"50px",margin:"0 auto"}}/>
   <div className="card-body">
   <h5 className="card-title"> {obj.gun1}</h5>
@@ -150,12 +152,13 @@ function Fetch({result}) {
   <p className="card-text-cel">Max: {obj.highesttemp7}°<br/> Min: {obj.lowesttemp7}°</p>
 </div>
 </div>
+<span >Mehmet Akif Kömürcü - 2022</span>
 
       </div>
 
 
 
-  <span >Mehmet Akif Kömürcü - 2022</span>
+  
     </div>
   
 

@@ -1,15 +1,17 @@
-import Form from './Components/Form';
+import Content from './Components/Content';
 import './App.css';
-
-
+import { ThemeProvider } from './Components/ThemeContext'
 function App() {
 
 
 
 
   return (
-    <div className="App">
-      <Form/>
+    <div>
+      <ThemeProvider>
+      <Content/>
+      </ThemeProvider>
+      
     </div>
   );
 }

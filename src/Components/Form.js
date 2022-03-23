@@ -1,8 +1,9 @@
 import cities from '../cities.json'
 import Fetch from './Fetch'
+import '../App.css';
 import {useState} from 'react'
-
-
+import {useContext} from 'react'
+import ThemeContext from './ThemeContext';
 function Form() {
     
  
@@ -12,6 +13,8 @@ function Form() {
       "longitude": "35.32889",
       
     })
+    const {theme,setTheme}=useContext(ThemeContext)
+    console.log(theme)
     const [form,setForm]=useState(result)
     const onChangeInput=(e)=>{
       
@@ -21,7 +24,7 @@ function Form() {
     }
   return (
    
-      <div>
+      <div className='form'>
         
        <span style={{marginBottom:"20px"}}>select a city</span>
        <br/>
@@ -31,9 +34,9 @@ function Form() {
             ))}
         </select>
         <br />
-        <button style={{marginTop:"10px"}} type='submit' className='btn btn-primary' onClick={onChangeInput}>GONDER</button>
+        <button style={{marginTop:"10px"}} type='submit' className='btn btn-primary' onClick={onChangeInput}>Send</button>
         
-      <br />
+        
       
         <Fetch result={result}/>
       </div>
