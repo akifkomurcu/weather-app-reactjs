@@ -51,7 +51,7 @@ function Fetch({result}) {
           icon2:res.list[1].weather[0].icon,
        
           highesttemp3:parseInt(res.list[2].main.temp_max-272.15),
-          lowesttemp3:parseInt(res.list[3].main.temp_min-272.15),
+          lowesttemp3:parseInt(res.list[2].main.temp_min-272.15),
           gun3:gunler[gunlersayi[2]],
           weather3:res.list[2].weather[0].main,
           icon3:res.list[2].weather[0].icon,
