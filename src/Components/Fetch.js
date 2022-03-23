@@ -30,7 +30,7 @@ function Fetch({result}) {
     async function getData(result) {
      
         const data = await fetch(
-            `http://api.openweathermap.org/data/2.5/forecast?lat=${result.latitude}&lon=${result.longitude}&appid=92ac4c4cde9401b43a5dc6a529ab57c6`
+            `https://api.openweathermap.org/data/2.5/forecast?lat=${result.latitude}&lon=${result.longitude}&appid=92ac4c4cde9401b43a5dc6a529ab57c6`
         );
         const res = await data.json();
           // kelvin to celsius  -272.15
