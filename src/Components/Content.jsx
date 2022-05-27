@@ -1,25 +1,18 @@
-import React from 'react'
-import Form from './Form'
-import ChangeTheme from './ChangeTheme';
-import {useContext} from 'react'
-import ThemeContext from './ThemeContext';
+import React from "react";
+import Form from "./Form";
+import ChangeTheme from "./ChangeTheme";
+import { useContext } from "react";
+import ThemeContext from "./ThemeContext";
 
 function Content() {
-  const {theme,setTheme}=useContext(ThemeContext)
+  const { theme, setTheme } = useContext(ThemeContext);
   return (
-    
-    <div className={`App ${theme}`}>
+    <div className={`${theme}`}>
+      <ChangeTheme />
 
-
-        <ChangeTheme/>
-
-        <Form/>
-
-
-    
-      
+      <Form />
     </div>
-  )
+  );
 }
 
-export default Content
+export default Content;

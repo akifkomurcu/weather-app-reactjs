@@ -1,53 +1,40 @@
-.App {
-
-  font-family: 'Red Hat Mono', monospace;
-  font-family: 'Roboto Slab', serif;
-}
-.changetheme{
-
+.changetheme {
   float: right;
   margin-top: 15px;
   margin-right: 15px;
 }
-.form{
-  width: 100%;
- text-align: center;
- padding-top: 250px;
+.form {
+  font-family: "Red Hat Mono", monospace;
+  font-family: "Roboto Slab", serif;
+  text-align: center;
+  padding-top: 250px;
 }
 
-
-
-.today{
+.today {
   border: 3px solid black;
 }
-.changetheme{
-  display: flex;
-}
 
-.light{
+.light {
   background-color: #c0a999;
-  height: 100vh;
 }
-.light span{
+.light span {
   margin-top: 10px;
-  color:#030303a4
+  color: #030303a4;
 }
 
-.dark{
+.dark {
   background-color: #3a281b;
   color: white;
-  height: 100vh;
 }
 
-.dark span{
+.dark span {
   margin-top: 10px;
-  color:#ebded6a4
+  color: #ebded6a4;
 }
-.dark .today{
+.dark .today {
   border: 3px solid #f8e7da;
-
 }
-.card{
+.card {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,5 +44,23 @@
   height: 14rem;
   margin-right: 10px;
   margin-top: 10px;
-  background-color:#F7CCAC ;
+  background-color: #f7ccac;
+}
+
+@media (min-width: 576px) {
+  .light {
+    width: 100%;
+  }
+  .dark {
+    width: 100%;
+  }
+}
+
+@media (min-width: 577px) {
+  .light {
+    width: 100vh;
+  }
+  .dark {
+    height: 100vh;
+  }
 }
