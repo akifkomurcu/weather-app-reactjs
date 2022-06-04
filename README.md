@@ -2,4 +2,4 @@
 
 ### Try to my Weather app from this adress!
 
-https://akifzsche-weatherapp.herokuapp.com/
+https://akifzsche-weatherapp.netlify.app/
