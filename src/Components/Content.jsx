@@ -9,7 +9,6 @@ function Content() {
   return (
     <div className={`${theme}`}>
       <ChangeTheme />
-
       <Form />
     </div>
   );
